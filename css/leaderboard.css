@@ -1,0 +1,520 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'F1';
+    height: 100vh;
+    background-image: url('../bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.leaderboard {
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 560px;
+    width: 200px;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.leaderboard-border {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: min-content;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-top-left-radius: calc(1rem + 10px);
+    border-bottom-left-radius: calc(1rem + 10px);
+    transition-duration: 0.5s;
+}
+span.espace {
+    color: transparent;
+}
+
+/* LEADERBOARD - HAUT */
+.leaderboard .top {
+    padding: .35rem;
+    background: rgb(28,28,28);
+    background: linear-gradient(0deg, rgb(75, 75, 75) 0%, rgba(28,28,28,1) 30%);
+    height: auto;
+    width: 100%;
+}
+.top .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(195, 195, 195);
+}
+.leaderboard .top .logo img {
+    height: 23px;
+    
+}
+#laps {
+    transform: translate(-5px, 5px);
+}
+#chequered-flag #laps {
+    background-image: url('../chequeredflag.png');
+    background-size: 150%;
+    background-position: -15px;
+    background-repeat: no-repeat;
+}
+#chequered-flag h2#laps {
+    width: 100%;
+    height: 100%;
+}
+#chequered-flag .lap-text {
+    text-align: center;
+    width: 200px;
+    backdrop-filter: brightness(0.45);
+}
+#seance {
+    text-align: center;
+    width: 50%;
+    font-size: 20pt;
+    text-transform: uppercase;
+}
+.top h2 {
+    font-size: 10pt;
+    color: aliceblue;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'F1-Italic';
+    margin-top: .2rem;
+}
+.current-lap {
+    text-align: right;
+    font-weight: bold;
+    font-size: 15pt;
+}
+.top h2.timer {
+    display: none;
+}
+div.timer {
+    display: none;
+}
+#timed-session .top h2.timer {
+    display: flex;
+    font-weight: bold;
+    font-size: 15pt;
+}
+#timed-session .timer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#timed-session .lap-count {
+    display: none;
+}
+#timed-session div.lap-count  {
+    display: none;
+}
+
+/* AFFICHAGE DRAPEAUX */
+.flags {
+    text-transform: uppercase;
+}
+        /* Dernier tour: */
+#final-lap .final-lap {
+    height: 50px;
+    border-bottom: 3px solid white;
+}
+.final-lap {
+    transition-duration: .1s;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+    background-color: rgb(28,28,28);
+    text-align: center;
+}
+#final-lap .leaderboard {
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-bottom: 7px;
+}
+.final-lap h2 {
+    font-family: 'F1-Bold';
+    font-style: italic;
+    font-size: 22pt;
+    margin-right: 1rem;
+    color: white;
+    transform: translate(5px, -2px);
+}
+        /* fin séance */
+#chequered-flag .leaderboard {
+    border-top: 3px solid rgb(255, 0, 0);
+    border-left: 3px solid rgb(255, 0, 0);
+    border-bottom: 3px solid rgb(255, 0, 0);
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-bottom: 7px;
+}
+        /* 15 minutes restantes: */
+#xm-restantes .xm-restantes {
+    height: 50px;
+}
+.xm-restantes {
+    transition-duration: .1s;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#xm-restantes .leaderboard {
+    border-top: 3px solid rgb(255, 0, 0);
+    border-left: 3px solid rgb(255, 0, 0);
+    border-bottom: 3px solid rgb(255, 0, 0);
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-bottom: 7px;
+}
+.xm-restantes {
+    border-left: 3px solid rgb(28,28,28);
+    background-color: rgb(28,28,28);
+    text-align: center;
+}
+.xm-restantes h3 {
+    font-size: 10pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: left;
+}
+.xm-restantes h2 {
+    font-family: 'F1-Bold';
+    font-style: italic;
+    font-size: 35pt;
+    margin-right: 1rem;
+    color: rgb(255, 0, 0);
+}
+        /* X tours restants: */
+#xt-restants .xt-restants {
+    height: 50px;
+}
+.xt-restants {
+    transition-duration: .1s;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#xt-restants .leaderboard {
+    border-top: 3px solid rgb(255, 0, 0);
+    border-left: 3px solid rgb(255, 0, 0);
+    border-bottom: 3px solid rgb(255, 0, 0);
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-bottom: 7px;
+}
+.xt-restants {
+    border-left: 3px solid rgb(28,28,28);
+    background-color: rgb(28,28,28);
+    text-align: center;
+}
+.xt-restants h3 {
+    font-size: 10pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: left;
+}
+.xt-restants h2 {
+    font-family: 'F1-Bold';
+    font-style: italic;
+    font-size: 35pt;
+    margin-right: 1rem;
+    color: rgb(255, 0, 0);
+}
+        /* Drapeau jaune: */
+#yellow-flag .yellow-flag {
+    height: 50px;
+}
+.yellow-flag {
+    transition-duration: .1s;
+    height: 0px;
+    overflow: hidden;
+}
+#yellow-flag .leaderboard-border {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 60%, rgba(211, 177, 0, 1) 75%);
+}
+.yellow-flag {
+    border-left: 3px solid rgb(28,28,28);
+    background-color: rgb(28,28,28);
+    text-align: center;
+}
+.yellow-flag h3 {
+    color: rgba(211, 177, 0, 1);
+    font-size: 12pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.yellow-flag h3 span {
+    font-family: 'F1-Wide';
+    font-size: 15pt;
+}
+.yellow-flag h2 {
+    font-family: 'F1-Bold';
+    font-style: italic;
+    background-color: rgba(211, 177, 0, 1);
+    font-size: 15pt;
+}
+        /* VSC: */
+#vsc .vsc {
+    height: 48px;
+}
+.vsc {
+    transition-duration: .1s;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background: rgba(211, 177, 0, 1);
+    border-left: 3px solid rgb(28,28,28);
+    text-align: center;
+    padding-left: .4rem;
+}
+
+#vsc .leaderboard-border {
+    background: rgba(211, 177, 0, 1);
+}
+.vsc h2 {
+    font-family: 'F1-Bold';
+    font-style: italic;
+    background-color: rgba(211, 177, 0, 1);
+    font-size: 15pt;
+    display: flex;
+    flex-direction: column;
+}
+.vsc h2 .top-text {font-size: 19pt;}
+.vsc h2 .bottom-text {font-size: 13pt; transform: translateY(-5px);}
+        /* Safety Car */
+#sc .sc {
+    height: 48px;
+}
+.sc {
+    transition-duration: .1s;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background: rgba(211, 177, 0, 1);
+    border-left: 3px solid rgb(28,28,28);
+    text-align: center;
+    padding-left: .4rem;
+}
+
+#sc .leaderboard-border {
+    background: rgba(211, 177, 0, 1);
+}
+.sc h2 {
+    font-family: 'F1-Bold';
+    font-style: italic;
+    background-color: rgba(211, 177, 0, 1);
+    font-size: 15pt;
+    display: flex;
+    flex-direction: column;
+}
+        /* Drapeau Rouge */
+
+#red-flag .red-flag {
+    height: 48px;
+}
+.red-flag {
+    transition-duration: .1s;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background: rgb(156, 2, 2);
+    border-left: 3px solid rgb(28,28,28);
+    text-align: center;
+}
+
+#red-flag .leaderboard-border {
+    background: rgb(156, 2, 2);
+}
+.red-flag h2 {
+    font-family: 'F1-Bold';
+    font-style: italic;
+    font-size: 24pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: .2rem;
+    margin-bottom: .1rem;
+    color: white;
+}
+        /* drapeau vert */
+
+#green-flag .green-flag {
+    height: 50px;
+}
+.green-flag {
+    transition-duration: .1s;
+    height: 0px;
+    overflow: hidden;
+}
+#green-flag .leaderboard-border {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 60%, rgba(7, 195, 8, 1) 75%);
+}
+.green-flag {
+    border-left: 3px solid rgb(28,28,28);
+    background-color: rgb(28,28,28);
+    text-align: center;
+}
+.green-flag h3 {
+    color: rgba(7, 195, 8, 1);
+    font-size: 12pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.green-flag h3 span {
+    font-family: 'F1-Wide';
+    font-size: 15pt;
+}
+.green-flag h2 {
+    font-family: 'F1-Bold';
+    font-style: italic;
+    background-color: rgb(7, 195, 8);
+    font-size: 15pt;
+}
+/* LEADERBOARD - BAS */
+.leaderboard .bottom {
+    height: 100%;
+    width: 100%;
+    padding-bottom: .1rem;
+    background-color: rgb(28,28,28);
+}
+.bottom ol {
+    padding-top: 3.5px;
+    counter-reset: item;
+    list-style-type: none;
+}
+.bottom li {
+    counter-increment: item;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    padding-left: .5rem;
+}
+.bottom li:before {
+    content: counters(item, ".") "";
+    color: #888;
+    font-style: italic;
+    margin-right: 10px;
+}
+#focus:before {
+    color: black;
+}
+.bottom li input {
+    font-size: 10pt;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'F1-Bold';
+    border: none;
+    background-color: transparent;
+    color: white;
+    max-width: 120px;
+}
+li#focus input {
+    color: black;
+}
+li input::placeholder {
+    color: white;
+}
+li#focus input::placeholder {
+    color: black;
+}
+.bottom ol li:nth-child(-n + 9) {
+    padding-left: 18px;
+}
+.bottom .teamlogo {
+    padding: .1rem;
+    height: calc(21px);
+    width: calc(21px);
+    margin-right: 10px;
+}
+.teamlogo img {
+    width: 100%;
+}
+#focus {
+    background-color: #ececec;
+}
+#focus h3 {
+    color: black;
+}
+.red-bull#focus .teamlogo {
+    background-color: #3671c6;
+}
+.ferrari#focus .teamlogo {
+    background-color: #e8002d;
+}
+.mclaren#focus .teamlogo {
+    background-color: #ff8000;
+}
+.mercedes#focus .teamlogo {
+    background-color: #27f4d2;
+}
+.aston-martin#focus .teamlogo {
+    background-color: #229971;
+}
+.rb#focus .teamlogo {
+    background-color: #6692ff;
+}
+.haas#focus .teamlogo {
+    background-color: #b6babd;
+}
+.williams#focus .teamlogo {
+    background-color: #64c4ff;
+}
+.alpine#focus .teamlogo {
+    background-color: #fc87ba;
+}
+.kick#focus .teamlogo {
+    background-color: #52e252;
+}
+.red-bull img {
+    transform: translateY(1px);
+}
+.mclaren img {
+    transform: translateY(1px);
+}
+.aston-martin img {
+    transform: translateY(-4px);
+}
+.rb img {
+    transform: translateY(2px);
+}
+.haas img {
+    transform: translateY(1px);
+}
+.williams img {
+    transform: translateY(2px);
+}

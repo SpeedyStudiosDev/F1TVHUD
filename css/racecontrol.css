@@ -1,0 +1,229 @@
+.racecontrol {
+    overflow: hidden;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-top: 10px solid rgba(255, 255, 255, 0.2);
+    border-right: 10px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 10px solid rgba(255, 255, 255, 0.2);
+    height: 550px;
+    width: auto;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.container {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: rgb(28, 28, 28);
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+}
+.controls {
+    margin-top: .5rem;
+}
+h1 {
+    font-family: 'F1-Black';
+    text-align: center;
+}
+h2 {
+    font-size: 18pt;
+}
+label {
+    cursor: pointer;
+}
+
+/* CHOIX: SEANCE */
+
+.type-seance select {
+    border: 5px solid aliceblue;
+    padding: .5rem;
+    color: aliceblue;
+    font-family: 'F1-Italic';
+    font-size: 15pt;
+    background-color: rgb(28, 28, 28);
+    border-radius: 1rem;
+    overflow: hidden;
+    outline: none;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.type-seance {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+/* CHOIX: ECHEANCE */
+.echeance {
+    margin-top: 1rem;
+}
+.echeance .top-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.echeance hr {
+    margin-bottom: 1rem;
+    width: calc(100% - 2rem);
+    border: 1px solid aliceblue;
+}
+.echeance input{
+    border: 5px solid aliceblue;
+    padding: .5rem;
+    color: aliceblue;
+    font-family: 'F1-Italic';
+    font-size: 15pt;
+    background-color: rgb(28, 28, 28);
+    border-radius: 1rem;
+    overflow: hidden;
+    outline: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+.echeance select {
+    border: 5px solid aliceblue;
+    padding: .5rem;
+    color: aliceblue;
+    font-family: 'F1-Italic';
+    font-size: 15pt;
+    background-color: rgb(28, 28, 28);
+    border-radius: 1rem;
+    overflow: hidden;
+    outline: none;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.echeance label {
+    margin: .2rem;
+    font-size: 15pt;
+}
+.echeance .timer{
+    margin-top: 1rem;
+}
+.echeance .lap-count {
+    margin-top: 1rem;
+}
+.echeance .separator {
+    width: 50px;
+    margin: 1rem;
+}
+/* CHOIX: INFORMATIONS À AFFICHER SUR LE LEADERBOARD */
+.infos-lb hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: calc(100% - 2rem);
+    border: 1px solid aliceblue;
+}
+.infos-lb select {
+    border: 5px solid aliceblue;
+    padding: .5rem;
+    color: aliceblue;
+    font-family: 'F1-Italic';
+    font-size: 15pt;
+    background-color: rgb(28, 28, 28);
+    border-radius: 1rem;
+    overflow: hidden;
+    outline: none;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.selector-infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.yellow-flag-custom {
+    margin-top: 1rem;
+    display: none;
+}
+#yellow-flag .yellow-flag-custom {
+    display: flex;
+    align-items: center;
+}
+.yellow-flag-custom input{
+    border: 5px solid aliceblue;
+    padding: .5rem;
+    color: aliceblue;
+    font-family: 'F1-Italic';
+    font-size: 15pt;
+    background-color: rgb(28, 28, 28);
+    border-radius: 1rem;
+    overflow: hidden;
+    outline: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+.xm-restantes label {
+    margin: .2rem;
+    font-size: 15pt;
+}
+.xm-restantes input{
+    border: 5px solid aliceblue;
+    padding: .5rem;
+    color: aliceblue;
+    font-family: 'F1-Italic';
+    font-size: 15pt;
+    background-color: rgb(28, 28, 28);
+    border-radius: 1rem;
+    overflow: hidden;
+    outline: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+.xt-restants label {
+    margin: .2rem;
+    font-size: 15pt;
+}
+.xt-restants input{
+    border: 5px solid aliceblue;
+    padding: .5rem;
+    color: aliceblue;
+    font-family: 'F1-Italic';
+    font-size: 15pt;
+    background-color: rgb(28, 28, 28);
+    border-radius: 1rem;
+    overflow: hidden;
+    outline: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+.yellow-flag-custom label {
+    margin: .2rem;
+    font-size: 15pt;
+}
+button.bouger-pilotes {
+    border: 5px solid aliceblue;
+    background-color: transparent;
+    border-radius: 1rem;
+    padding: .5rem;
+    color: aliceblue;
+    font-family: 'F1';
+    font-size: 15pt;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+div.bouger-pilotes {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.racecontrol .xt-restants {
+    margin-top: .5rem;
+}
+.racecontrol .xm-restantes {
+    margin-top: .5rem;
+}
+.racecontrol .yellow-flag-custom {
+    margin-top: .5rem;
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html id="lap-session" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/leaderboard.css">
+    <link rel="stylesheet" href="css/racecontrol.css">
+    <title>F1 TV HUD</title>
+</head>
+<body id="">
+    <div class="leaderboard-border">
+        <div class="leaderboard">
+            <div class="top">
+                <div class="logo"><img src="logo.png" alt=""><h1 id="seance">Race</h1></div>
+                <div class="laps">
+                    <h2 class="lap-count" id="laps"><span class="lap-text">LAP<span class="espace">.</span><span class="current-lap" id="actual-lap">#</span>/<span class="total-laps" id="total-laps">#</span></span></h2>
+                </div>
+                <h2 class="timer"><span class="time-reamaining" id="time-reamaining">hh:mn:sc</span></h2>
+            </div>
+            <div class="flags">
+                <div class="green-flag">
+                    <h2 class="falg">Green flag</h2>
+                    <h3>track clear</h3>
+                </div>
+                <div class="yellow-flag">
+                    <h2 class="falg">Yellow flag</h2>
+                    <h3>Sectors <span class="espace">.</span><span id="secteurs">1</span></h3>
+                </div>
+                <div class="vsc">
+                    <img src="FIA-Logo-2.png" width="48px">
+                    <h2 class="falg"><span class="top-text">Virtual</span><span class="bottom-text">Safety car</span></h2>
+                </div>
+                <div class="sc">
+                    <img src="FIA-Logo-2.png" width="48px">
+                    <h2 class="falg">Safety car</h2>
+                </div>
+                <div class="red-flag">
+                    <h2 class="falg">red flag</h2>
+                </div>
+                <div class="xm-restantes">
+                    <h2 class="falg" id="minutes">15</h2>
+                    <h3>minutes<br>to go</h3>
+                </div>
+                <div class="xt-restants">
+                    <h2 class="falg" id="tours">15</h2>
+                    <h3>laps<br>to go</h3>
+                </div>
+                <div class="final-lap">
+                    <h2 class="falg" id="tours">Final lap</h2>
+                </div>
+            </div>
+            <div class="bottom">
+                <ol id="ranks">
+                    <li class="red-bull" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/redbull.png">
+                        </div>
+                        <input type="text" placeholder="Verstappen">
+                    </li>
+                    <li class="red-bull" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/redbull.png">
+                        </div>
+                        <input type="text" placeholder="Pérez">
+                    </li>
+                    <li class="ferrari" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/ferrari.png">
+                        </div>
+                        <input type="text" placeholder="Leclerc">
+                    </li>
+                    <li class="ferrari" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/ferrari.png">
+                        </div>
+                        <input type="text" placeholder="Sainz">
+                    </li>
+                    <li class="mclaren" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/mclaren.png">
+                        </div>
+                        <input type="text" placeholder="Norris">
+                    </li>
+                    <li class="mclaren" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/mclaren.png">
+                        </div>
+                        <input type="text" placeholder="Piastri">
+                    </li>
+                    <li class="mercedes" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/mercedes.png">
+                        </div>
+                        <input type="text" placeholder="Russell">
+                    </li>
+                    <li class="mercedes" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/mercedes.png">
+                        </div>
+                        <input type="text" placeholder="Hamilton">
+                    </li>
+                    <li class="aston-martin" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/astonmartin.png">
+                        </div>
+                        <input type="text" placeholder="Alonso">
+                    </li>
+                    <li class="aston-martin" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/astonmartin.png">
+                        </div>
+                        <input type="text" placeholder="Stroll">
+                    </li>
+                    <li class="rb" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/rb.png">
+                        </div>
+                        <input type="text" placeholder="Tsunoda">
+                    </li>
+                    <li class="rb" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/rb.png">
+                        </div>
+                        <input type="text" placeholder="Ricciardo">
+                    </li>
+                    <li class="haas" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/haas.png">
+                        </div>
+                        <input type="text" placeholder="Hulkenberg">
+                    </li>
+                    <li class="haas" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/haas.png">
+                        </div>
+                        <input type="text" placeholder="Magnussen">
+                    </li>
+                    <li class="williams" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/xilliams.png">
+                        </div>
+                        <input type="text" placeholder="Albon">
+                    </li>
+                    <li class="williams" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/xilliams.png">
+                        </div>
+                        <input type="text" placeholder="Sargeant">
+                    </li>
+                    <li class="alpine" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/alpine.png">
+                        </div>
+                        <input type="text" placeholder="Ocon">
+                    </li>
+                    <li class="alpine" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/alpine.png">
+                        </div>
+                        <input type="text" placeholder="Gasly">
+                    </li>
+                    <li class="kick" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/kick.png">
+                        </div>
+                        <input type="text" placeholder="Zhou">
+                    </li>
+                    <li class="kick" id="driver">
+                        <div class="teamlogo">
+                            <img src="logo-teams/kick.png">
+                        </div>
+                        <input type="text" placeholder="Bottas">
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="racecontrol">
+        <div class="container">
+            <h1>RACE CONTROL PANNEL</h1>
+            <div class="controls">
+                <div class="type-seance">
+                    <h2 class="seance-choice">Type de séance:</h2>
+                    <select id="liste-seances">
+                        <option value="none">Sélectionner</option>
+                        <optgroup label="Séances d'essais:">
+                            <option value="fp1">FP1</option>
+                            <option value="fp2">FP2</option>
+                            <option value="fp3">FP3</option>
+                        </optgroup>
+                        <optgroup label="Séances Sprint Shootout:">
+                            <option value="sq1">SQ1</option>
+                            <option value="sq2">SQ2</option>
+                            <option value="sq3">SQ3</option>
+                        </optgroup>
+                        <optgroup label="Séances Qualifications:">
+                            <option value="q1">Q1</option>
+                            <option value="q2">Q2</option>
+                            <option value="q3">Q3</option>
+                        </optgroup>
+                        <optgroup label="Séances Courses">
+                            <option value="sr">Course sprint</option>
+                            <option value="race">Course</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="echeance">
+                    <hr>
+                    <div class="top-part">
+                        <h2 class="type-echeance">Type d'échéance:</h2>
+                        <select id="echeance-select">
+                            <option value="lap-session">Tours à effectuer</option>
+                            <option value="timed-session">Chronomètre</option>
+                        </select>
+                    </div>
+                    <div class="bottom-part">
+                        <div class="lap-count">
+                            <form action="">
+                                <label for="tours-faits">Tours effectués:</label>
+                                <input type="number" id="tours-faits" oninput="updateSpan()">
+                                <div class="separator"></div>
+                                <label for="tours-a-faire">Tours à effectuer:</label>
+                                <input type="number" id="tours-a-faire" oninput="updateTotal()">
+                            </form>
+                        </div>
+                        <div class="timer">
+                            <label for="temps-restant">Temps restant à la séance:</label>
+                            <input type="text" id="temps-restant" placeholder="hr:mn:sc" oninput="updateTotaltime()">
+                        </div>
+                    </div>
+                </div>
+                <div class="infos-lb">
+                    <hr>
+                    <div class="selector-infos">
+                        <h2 class="type-infos-lb">Informations à afficher:</h2>
+                        <select id="infos-lb-select" onchange="changeBodyId(this)">
+                            <option value="">Sélectionner</option>
+                            <optgroup label="Drapeaux:">
+                                <option value="yellow-flag">Drapeau jaune</option>
+                                <option value="green-flag">Drapeau vert</option>
+                                <option value="vsc">VSC</option>
+                                <option value="sc">Safecty car</option>
+                                <option value="red-flag">Drapeau rouge</option>
+                            </optgroup>
+                            <optgroup label="Autres informations:">
+                                <option value="xm-restantes">X minutes restants</option>
+                                <option value="xt-restants">X tours restants</option>
+                                <option value="final-lap">Dernier tour</option>
+                                <option value="chequered-flag">Drapeau à damiers</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="yellow-flag-custom">
+                        <label for="yf-sectors">Secteurs impactés:</label>
+                        <input type="text" id="yf-sectors" placeholder="ex: 1 & 2" oninput="updateSectors()">
+                    </div>
+                    <div class="xm-restantes">
+                        <div>
+                            <label for="def-minutes">Minutes restantes:</label>
+                            <input type="text" id="def-minutes" placeholder="ex: 15" oninput="updateMinutes()">                        
+                        </div>
+                    </div>
+                    <div class="xt-restants">
+                        <div>
+                            <label for="def-tours">Tours restants:</label>
+                            <input type="text" id="def-tours" placeholder="ex: 15" oninput="updateTours()">                        
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="bouger-pilotes">
+                        <h2 class="bouger-pilotes">Changer la position du pilote:</h2>
+                        <div>
+                            <button class="bouger-pilotes" id="gain-pos">
+                                <h3 class="bouger-pilotes">↑</h3>
+                            </button>
+                            <button class="bouger-pilotes" id="perte-pos">
+                                <h3 class="bouger-pilotes">↓</h3>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/positions-change.js"></script>
+    <script src="js/seance-select.js"></script>
+    <script src="js/type-echeance.js"></script>
+    <script src="js/tours-faits.js"></script>
+    <script src="js/tours-totaux.js"></script>
+    <script src="js/temps-total.js"></script>
+    <script src="js/type-nfos-lb.js"></script>
+    <script src="js/secteurs-dj.js"></script>
+    <script src="js/green-flag-timeout.js"></script>
+    <script src="js/xm-restantes.js"></script>
+    <script src="js/xm-restantes-def.js"></script>
+    <script src="js/xt-restants.js"></script>
+    <script src="js/xt-restants-def.js"></script>
+    <script src="js/nom-pilote-focus.js"></script>
+    <script src="js/orcdre-classement.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+</html>
